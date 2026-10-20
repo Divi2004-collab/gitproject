@@ -1,0 +1,21 @@
+Flagged Transactions = CALCULATE(COUNTROWS(Transactions), Transactions[is_flagged] = TRUE())
+
+Flagged Amount = CALCULATE(SUM(Transactions[amount]), Transactions[is_flagged] = TRUE())
+
+Flagged Accounts = CALCULATE(DISTINCTCOUNT(Transactions[account_id]), Transactions[is_flagged] = TRUE())
+
+Bounced Cheques = CALCULATE(COUNTROWS(Cheques), NOT(ISBLANK(Cheques[bounce_date])))
+
+Cheque Count = COUNTROWS(Cheques)
+
+Bounce Rate = DIVIDE([Bounced Cheques], [Cheque Count], 0)
+
+Recovered Amount = SUM(Cheques[recovered_amount])
+
+Outstanding Amount = SUMX(Cheques, MAX(0, Cheques[amount] - Cheques[recovered_amount]))
+
+Recovery Rate = DIVIDE([Recovered Amount], SUM(Cheques[amount]), 0)
+
+Overdue 30+ Amount = CALCULATE([Outstanding Amount], Cheques[days_past_due] > 30)
+
+Overdue 90+ Cheques = CALCULATE(COUNTROWS(Cheques), Cheques[days_past_due] > 90, Cheques[amount] > Cheques[recovered_amount])

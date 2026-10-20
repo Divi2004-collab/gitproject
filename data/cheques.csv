@@ -1,0 +1,13 @@
+cheque_id,cheque_no,issue_date,due_date,customer_id,account_id,branch,amount,status,bounce_date,bounce_reason,recovered_amount,last_follow_up
+CH2001,004512,2026-07-10,2026-07-20,C001,AC****1042,Chennai Central,45000,Bounced,2026-07-21,Insufficient funds,20000,2026-09-15
+CH2002,009841,2026-08-01,2026-08-10,C002,AC****9921,Bengaluru MG Road,82000,Bounced,2026-08-11,Signature mismatch,0,2026-09-10
+CH2003,003762,2026-08-15,2026-08-25,C003,AC****4310,Mumbai Fort,26500,Partially recovered,2026-08-26,Insufficient funds,15000,2026-09-18
+CH2004,006219,2026-09-01,2026-09-10,C004,AC****7812,Delhi Connaught Place,120000,Pending,,,0,
+CH2005,008050,2026-06-01,2026-06-15,C005,AC****6201,Hyderabad Hitech City,31500,Bounced,2026-06-16,Account closed,0,2026-09-12
+CH2006,007714,2026-08-20,2026-08-30,C006,AC****3650,Pune Camp,68000,Bounced,2026-08-31,Insufficient funds,30000,2026-09-17
+CH2007,001635,2026-09-04,2026-09-14,C007,AC****2288,Kolkata Park Street,55000,Recovered,2026-09-15,Insufficient funds,55000,2026-09-16
+CH2008,009422,2026-07-22,2026-08-01,C008,AC****5574,Ahmedabad CG Road,19000,Bounced,2026-08-02,Signature mismatch,5000,2026-09-11
+CH2009,002871,2026-08-28,2026-09-07,C009,AC****8835,Jaipur MI Road,94000,Pending,,,0,
+CH2010,005063,2026-07-05,2026-07-15,C010,AC****3390,Kochi MG Road,40500,Bounced,2026-07-16,Insufficient funds,10000,2026-09-14
+CH2011,004971,2026-09-12,2026-09-22,C001,AC****1042,Chennai Central,27500,Pending,,,0,
+CH2012,007153,2026-06-20,2026-07-01,C002,AC****9921,Bengaluru MG Road,73500,Bounced,2026-07-02,Insufficient funds,73500,2026-08-05

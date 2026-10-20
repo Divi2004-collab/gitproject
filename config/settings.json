@@ -1,0 +1,31 @@
+{
+  "timezone": "Asia/Kolkata",
+  "reporting_currency": "INR",
+  "pii_masking_enabled": true,
+  "max_upload_mb": 25,
+  "log_level": "INFO",
+  "paths": {
+    "transactions": "data/transactions.csv",
+    "cheques": "data/cheques.csv",
+    "output": "output"
+  },
+  "risk": {
+    "odd_hour_start": 6,
+    "odd_hour_end": 22,
+    "robust_mad_multiplier": 3.0,
+    "minimum_amount_threshold": 100000,
+    "quantile_fallback": 0.95,
+    "rapid_transaction_minutes": 5,
+    "rapid_transaction_count": 4,
+    "new_payee_amount": 50000,
+    "risk_medium_score": 35,
+    "risk_high_score": 70,
+    "risk_critical_score": 90
+  },
+  "recovery": {
+    "aging_bands": [30, 60, 90],
+    "follow_up_sla_days": 7,
+    "reminder_grace_days": 3,
+    "send_messages_automatically": false
+  }
+}
